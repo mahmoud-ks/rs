@@ -2,6 +2,7 @@
     font-family: 'Hurme';
     src: url('HurmeGeometricSans1-Light.woff2') format('woff2'),
         url('HurmeGeometricSans1-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {
