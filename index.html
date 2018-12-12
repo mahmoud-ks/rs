@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- REQUIRED CSS: FONT, BOOTSTRAP, METISMENU, PERFECT-SCROLLBAR  -->
+  <link rel="stylesheet" href="../dist/css/vendor.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+
+  <!-- PLUGINS FOR CURRENT PAGE -->
+  <link rel="stylesheet" href="../plugins/swiper/swiper.min.css">
+  <link rel="stylesheet" href="../plugins/noty/noty.min.css">
+
+  <!-- Mimity CSS  -->
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/css/custom.css">
+  <link rel="stylesheet" href="../dist/css/responsive.css">
+  <title>RADIASHAKER</title>
+</head>
+
+<body>
+  <!--Header -->
+  <header>
+    <div class="container container-md-none">
+
+      <!-- Sidebar toggler -->
+      <a class="nav-link mobile-menu-icon nav-icon ml-ni nav-toggler mr-3 d-flex d-lg-none" href="#" data-toggle="modal"
+        data-target="#menuModal">
+        <i data-feather="menu"></i>
+      </a>
+      <!-- Logo -->
+      <a class="nav-link nav-logo" href="index.html"><img src="../img/RS-logo-50.png" alt="RADIASHAKER logo"></a>
+      <div class="mobile-cart-icon d-absolute d-lg-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.75 34.79">
+          <defs>
+            <style>.cls-1{fill:none;stroke:#003250;stroke-miterlimit:10;stroke-width:2.15px;}.cls-2{fill:#003250;}</style>
+          </defs>
+          <title>Asset 1</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="SEARCH">
+              <rect class="cls-1" x="1.07" y="7.09" width="30.6" height="26.62" />
+              <polyline class="cls-1" points="22.73 14.71 22.73 1.07 9.51 1.07 9.51 14.71" />
+              <path class="cls-2" d="M11.43,23c0-3.89,2.11-6.11,5-6.11s4.94,2.22,4.94,6.11-2.11,6.11-4.94,6.11S11.43,26.91,11.43,23Zm8.16,0c0-3.06-1.32-4.59-3.2-4.59S13.16,20,13.16,23s1.32,4.59,3.22,4.59S19.59,26.07,19.59,23Z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <!-- Main navigation -->
+      <ul class="nav nav-main ml-auto d-none d-lg-flex text-uppercase">
+        <!-- hidden on md -->
+        <li class="nav-item dropdown dropdown-hover dropdown-mega">
+          <a class="nav-link dropdown-toggle active-line" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            e-shop
+          </a>
+          <div class="dropdown-menu eshop-menu">
+            <div class="row mega-col bg-white">
+              <div class="col-28 p-30">
+                <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                  <a href="#" class="list-group-item list-group-item-action">dress</a>
+                  <a href="#" class="list-group-item list-group-item-action">skirts</a>
+                  <a href="#" class="list-group-item list-group-item-action">tops</a>
+                  <a href="#" class="list-group-item list-group-item-action">t-shirts</a>
+                  <a href="#" class="list-group-item list-group-item-action">knitwear</a>
+                  <a href="#" class="list-group-item list-group-item-action">scarf</a>
+                  <a href="#" class="list-group-item list-group-item-action">jeans</a>
+                </div>
+              </div>
+              <div class="col-28 p-30">
+                <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                  <a href="#" class="list-group-item list-group-item-action">shirts</a>
+                  <a href="#" class="list-group-item list-group-item-action">blazers</a>
+                  <a href="#" class="list-group-item list-group-item-action">coats</a>
+                  <a href="#" class="list-group-item list-group-item-action">jackets</a>
+                  <a href="#" class="list-group-item list-group-item-action">trousers</a>
+                  <a href="#" class="list-group-item list-group-item-action">accessories</a>
+                </div>
+              </div>
+              <div class="col-44 roboto-condensed">
+                <div class="card text-white zoom-hover">
+                  <div data-cover="../img/categories/Asset1.png" data-height="474px"></div>
+                  <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column">
+                    <h2 class="card-title text-center text-white">WINTER COLLECTION</h2>
+                    <a href="#" class="btn btn-white text-capitalize">discover</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class=" nav-item"><a class="nav-link nav-dot" href="#">&#x25cf</a></li>
+        <li class=" nav-item"><a class="nav-link" href="#">collection</a></li>
+        <li class=" nav-item"><a class="nav-link nav-dot" href="#">&#x25cf</a></li>
+        <li class=" nav-item"><a class="nav-link" href="#">news</a></li>
+        <li class=" nav-item"><a class="nav-link nav-dot" href="#">&#x25cf</a></li>
+        <li class=" nav-item"><a class="nav-link" href="#">our story</a></li>
+      </ul>
+      <!-- /Main navigation -->
+
+      <!-- Search form -->
+      <div class="ml-auto mr-0 mr-sm-1 d-none d-sm-flex fix-navbar"></div>
+      <!-- /Search form -->
+
+      <ul class="nav ml-auto ml-sm-0 text-uppercase d-none d-lg-flex">
+        <!-- Search form toggler -->
+        <li class="nav-item d-block d-sm-none ml-2 ml-lg-0"><a class="nav-link nav-icon search-toggle" href="#"><i
+              data-feather="search"></i></a></li>
+        <li class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle forwardable" data-toggle="dropdown" href="account-profile.html" role="button"
+            aria-haspopup="true" aria-expanded="false">
+            Account
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="account-login.html">Login / Register</a>
+            <a class="dropdown-item" href="account-profile.html">Profile Page</a>
+            <a class="dropdown-item" href="account-orders.html">Orders List</a>
+            <a class="dropdown-item" href="account-wishlist.html">Wishlist</a>
+            <a class="dropdown-item" href="account-address.html">Address</a>
+          </div>
+        </li>
+        <!-- Cart dropdown -->
+        <li class="nav-item dropdown dropdown-hover dropdown-cart pr-14">
+          <a class="nav-link nav-icon mr-nis dropdown-toggle forwardable ml-2" data-toggle="dropdown" href="cart.html"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            BAG
+            <span class="badge">4</span>
+          </a>
+          <!-- <div class="dropdown-menu dropdown-menu-right">
+              
+              <div class="media">
+                <a href="shop-single.html"><img src="../img/products/1_small.jpg" width="50" height="50" alt="Hanes Hooded Sweatshirt"></a>
+                <div class="media-body">
+                  <a href="shop-single.html" title="Hanes Hooded Sweatshirt">Hanes Hooded Sweatshirt</a>
+                  <span class="qty">1</span> x <span class="price">$18.56</span>
+                  <button type="button" class="close" aria-label="Close"><i data-feather="x-circle"></i></button>
+                </div>
+              </div>
+              
+              <div class="media">
+                <a href="shop-single.html"><img src="../img/products/2_small.jpg" width="50" height="50" alt="The Flash Logo T-Shirt"></a>
+                <div class="media-body">
+                  <a href="shop-single.html" title="The Flash Logo T-Shirt">The Flash Logo T-Shirt</a>
+                  <span class="qty">1</span> x <span class="price">$16.64</span>
+                  <button type="button" class="close" aria-label="Close"><i data-feather="x-circle"></i></button>
+                </div>
+              </div>
+              
+              <div class="media">
+                <a href="shop-single.html"><img src="../img/products/3_small.jpg" width="50" height="50" alt="Open Front Cropped Cardigans"></a>
+                <div class="media-body">
+                  <a href="shop-single.html" title="Open Front Cropped Cardigans">Open Front Cropped Cardigans</a>
+                  <span class="qty">1</span> x <span class="price">$15.20</span>
+                  <button type="button" class="close" aria-label="Close"><i data-feather="x-circle"></i></button>
+                </div>
+              </div>
+              
+              <div class="media">
+                <a href="shop-single.html"><img src="../img/products/4_small.jpg" width="50" height="50" alt="Cotton Fleece Long Hoodie"></a>
+                <div class="media-body">
+                  <a href="shop-single.html" title="Cotton Fleece Long Hoodie">Cotton Fleece Long Hoodie</a>
+                  <span class="qty">1</span> x <span class="price">$85.00</span>
+                  <button type="button" class="close" aria-label="Close"><i data-feather="x-circle"></i></button>
+                </div>
+              </div>
+              
+              <div class="d-flex justify-content-between pb-3 pt-2">
+                <span>Total</span>
+                <strong>$135.40</strong>
+              </div>
+              <div class="d-flex justify-content-between pb-2">
+                <div class="w-100 mr-1">
+                  <a href="#" class="btn btn-block rounded-pill btn-secondary">View Cart</a>
+                </div>
+                <div class="w-100 ml-1">
+                  <a href="#" class="btn btn-block rounded-pill btn-primary">Checkout</a>
+                </div>
+              </div>
+            </div> -->
+        </li>
+        <li class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle forwardable" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            EN$
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">EN</a>
+            <a class="dropdown-item" href="#">FR</a>
+            <a class="dropdown-item" href="#">TR</a>
+            <a class="dropdown-item" href="#">AR</a>
+          </div>
+        </li>
+        <li class=" nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+      </ul>
+
+    </div><!-- /.container -->
+  </header>
+  <!-- /Header -->
+
+  <!-- Main Content -->
+  <div class="container home-content">
+
+    <!-- home -->
+    <div class="row categories-grid gutters-3">
+      <div class="col-sm-12 col-md-12 col-lg-7 p-0">
+        <a href="#">
+          <div class="card zoom-hover">
+            <div data-cover="../img/categories/1.jpg" data-xs-height="220px" data-sm-height="220px" data-md-height="246px"
+              data-lg-height="679px" data-xl-height="679px">
+            </div>
+            <div class="card-img-overlay">
+              <div class="text-center cart-con">
+                <h2 class="card-title text-uppercase size-250 home-cart-title">shirts</h2>
+                <h5 class="btn btn-white text-capitalize btn-lg bold home-discover home-discover">discover</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-5">
+        <div class="row gutters-3">
+          <div class="col-sm-12 mt-sm-0 p-0">
+            <a href="#">
+              <div class="card zoom-hover">
+                <div data-cover="../img/categories/2.jpg" data-xs-height="220px" data-sm-height="220px" data-md-height="115px"
+                  data-lg-height="293px" data-xl-height="293px"></div>
+                <div class="card-img-overlay">
+                  <div class="text-center cart-con">
+                    <h3 class="card-title text-center text-uppercase size-250 home-cart-title">scarfs</h3>
+                    <h5 class="btn btn-white text-capitalize btn-lg bold home-discover">discover</h5>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-12 p-0">
+            <a href="#">
+              <div class="card zoom-hover">
+                <div data-cover="../img/categories/3.jpg" data-xs-height="220px" data-sm-height="220px" data-md-height="115px"
+                  data-lg-height="386px" data-xl-height="386px"></div>
+                <div class="card-img-overlay">
+                  <div class="text-center cart-con">
+                    <h3 class="card-title text-center text-uppercase size-250 home-cart-title">accessories</h3>
+                    <h5 class="btn btn-white text-capitalize btn-lg bold home-discover">discover</h5>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /home -->
+    <div class="row categories-grid gutters-3 d-none d-lg-flex">
+      <div class="col-sm-6 col-md-7 p-0">
+        <div class="text-center v-center-p">
+          <div class="v-center-c">
+            <h2 class="text-upper size-225 ">WINTER COLLECTION</h2>
+            <h3 class="collection-des">discover our selection of clothes & accessories</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-5">
+        <div class="row gutters-3">
+          <div class="col-6 col-sm-12 mt-sm-0 p-0">
+            <a href="#">
+              <div class="card">
+                <div data-cover="../img/categories/4.jpg" data-xs-height="220px" data-sm-height="220px" data-md-height="115px"
+                  data-lg-height="430px" data-xl-height="430px"></div>
+                <div class="card-img-overlay">
+                  <div class="text-center cart-con">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12 p-0 d-none d-xl-none d-lg-none">
+        <a href="#">
+          <div class="card zoom-hover">
+            <div data-cover="../img/categories/4.jpg" data-xs-height="220px" data-sm-height="220px" data-md-height="115px"
+              data-lg-height="386px" data-xl-height="386px"></div>
+            <div class="card-img-overlay">
+              <div class="text-center cart-con w-100p">
+                <h3 class="card-title text-center text-uppercase size-250 home-cart-title text-white">accessories</h3>
+                <h5 class="btn btn-white text-capitalize btn-lg bold home-discover">discover</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    <div class="row categories-grid gutters-3">
+      <div class="col-sm-12 col-md-12 p-0">
+        <a href="#">
+          <div class="card zoom-hover">
+            <div data-cover="../img/categories/5.jpg" data-xs-height="220px" data-sm-height="220px" data-md-height="246px"
+              data-lg-height="678px" data-xl-height="678px">
+            </div>
+            <div class="card-img-overlay">
+              <div class="text-center trench">
+                <h2 class="card-title text-uppercase size-250 home-cart-title">TRENCH COATS</h2>
+                <h5 class="btn btn-white text-capitalize btn-lg bold home-discover">discover</h5>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer d-none d-lg-block">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-6 col-lg-6">
+          <div class="row">
+            <div class="col-4 col-lg-4">
+              <h6 class="bold text-uppercase">help</h6>
+              <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                <a href="#" class="list-group-item">size guide</a>
+                <a href="#" class="list-group-item">Delivery</a>
+                <a href="#" class="list-group-item">Payment</a>
+                <a href="#" class="list-group-item">Privacy</a>
+              </div>
+            </div>
+            <div class="col-4 col-lg-4">
+              <h6 class="bold text-uppercase">about</h6>
+              <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                <a href="#" class="list-group-item">Radia Shaker</a>
+                <a href="#" class="list-group-item ">Values &amp; engagements</a>
+                <a href="#" class="list-group-item">Recycling</a>
+              </div>
+            </div>
+            <div class="col-4 col-lg-4">
+              <h6 class="bold text-uppercase">contact</h6>
+              <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                <a href="#" class="list-group-item">Customer Service</a>
+                <a href="#" class="list-group-item">Career</a>
+                <a href="#" class="list-group-item">Affiliate</a>
+                <a href="#" class="list-group-item">Store locator</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-6 border-left">
+          <div class="row height-100p">
+            <div class="col-5 col-lg-5 v-center-p">
+              <img class="v-center-c footer-rs-icon" src="../img/categories/rs-icon.svg" alt="" style="height: 90px">
+            </div>
+            <div class="col-7 col-lg-7">
+              <div class="v-center-p">
+                <div class="v-center-c">
+                  <ul class="follow-us nav-item d-inline d-inline-flex m-0">
+                    <li class="text-uppercase followuson pt-5px">FOLLOW US ON</li>
+                    <li><a href="#"><img src="../img/icon/facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../img/icon/instagram.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../img/icon/twitter.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../img/icon/pinterest.svg" alt=""></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">Copyright © 2018 RADIASHAKER All right reserved</div>
+  <!-- /Footer -->
+  <!--Menu Modal -->
+  <div class="modal modal-left modal-menu" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content transparent" style="height: 119%;">
+        <div class="modal-body shadow">
+          <div class="container">
+            <button type="button" class="close close-menu" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <ul class="menu text-uppercase" id="menu">
+            <li class="no-sub mm-active"><a href="index.html">home</a></li>
+            <li>
+              <a href="#">e-shop</a>
+              <ul>
+                <li><a href="">dress</a></li>
+                <li><a href="">skirts</a></li>
+                <li><a href="">tops</a></li>
+                <li><a href="">t-shirts</a></li>
+                <li><a href="">knitwear</a></li>
+                <li><a href="">scarf</a></li>
+                <li><a href="">jeans</a></li>
+                <li><a href="">shirts</a></li>
+                <li><a href="">blazers</a></li>
+                <li><a href="">coats</a></li>
+                <li><a href="">jackets</a></li>
+                <li><a href="">trousers</a></li>
+              </ul>
+            </li>
+            <li class="no-sub"><a href="">WINTER COLLECTION</a></li>
+            <li class="no-sub"><a href="">news</a></li>
+            <li class="no-sub"><a href="">accessories</a></li>
+            <li class="no-sub"><a href="">our story</a></li>
+            <li class="no-sub"><a href="">stores</a></li>
+            <li class="no-sub"><a href="">careers</a></li>
+            <li>
+              <a href="#">Account</a>
+              <ul>
+                <li><a href="account-login.html">Login / Register</a></li>
+                <li><a href="account-profile.html">Profile Page</a></li>
+                <li><a href="account-orders.html">Orders List</a></li>
+                <li><a href="account-wishlist.html" class="has-badge">Wishlist <span class="badge rounded badge-primary">2</span></a></li>
+                <li><a href="account-address.html">Address</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Menu Modal -->
+
+  <!-- REQUIRED JS  -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/feather-icons/feather.min.js"></script>
+  <script src="../plugins/metismenu/metisMenu.min.js"></script>
+  <script src="../plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+  <!-- PLUGINS FOR CURRENT PAGE -->
+  <script src="../plugins/swiper/swiper.min.js"></script>
+  <script src="../plugins/noty/noty.min.js"></script>
+  <script src="../plugins/jquery-countdown/jquery.countdown.min.js"></script>
+
+  <!-- Mimity JS  -->
+  <script src="../dist/js/script.min.js"></script>
+
+  <script>
+    $(function () {
+
+      App.atcDemo() // Add to Cart Demo
+      App.atwDemo() // Add to Wishlist Demo
+      App.homeSlider('#home-slider')
+      App.dealsSlider('#deals-slider')
+      App.colorOption()
+
+      // example countdown, 6 hours from now for flash deals
+      var countdown = new Date()
+      countdown.setHours(countdown.getHours() + 6)
+      $('#flash-deals-countdown').countdown(countdown, function (event) {
+        $(this).text(event.strftime('%H:%M:%S'))
+      })
+
+    })
+  </script>
+
+</body>
+
+</html>
