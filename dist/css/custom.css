@@ -256,3 +256,74 @@ hr.under-title {
 .footer .list-group-item {
     padding-bottom: 0;
 }
+.product-dot {
+    font-size: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -6px;
+}
+.categories-grid .card-title {
+    color: #000;
+    font-weight: 500;
+}
+.price span {
+    font-weight: 300;
+    color: #808080;
+}
+.text-rs-b{
+    color: #083250;
+}
+.bg-rs-b{
+    background-color: #083250;
+}
+.bg-rs-p{
+    background-color: #fac9b8;
+}
+.text-rs-p{
+    color: #fac9b8;
+}
+.cat-title {
+    font-weight: 300;
+    font-size: 3rem;
+}
+.categories-horizontal {
+    margin: 0 35px;
+}
+.categories-horizontal a {
+    transition: border 0.25s ease-out;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 0, 1);
+}
+.categories-horizontal a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+.categories-horizontal .active a {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+.product-name{
+    color: #000 !important;
+}
+.card-body:hover .reveal {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.reveal {
+    position: absolute;
+    bottom: 67px;
+    color: wheat;
+    text-align: center;
+    background-color: white;
+    width: 86%;
+    left: 7%;
+    height: 135px;
+}
+.text-gray {
+    color: #808080
+}
+.item-label {
+    text-align: left;
+    padding: 20px;
+}

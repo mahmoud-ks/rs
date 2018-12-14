@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.75 34.79">
+  <defs>
+    <style>.cls-1{fill:none;stroke:#003250;stroke-miterlimit:10;stroke-width:2.15px;}.cls-2{fill:#003250;}</style>
+  </defs>
+  <title>Asset 1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="SEARCH">
+      <rect class="cls-1" x="1.07" y="7.09" width="30.6" height="26.62" />
+      <polyline class="cls-1" points="22.73 14.71 22.73 1.07 9.51 1.07 9.51 14.71" />
+      <path class="cls-2" d="M11.43,23c0-3.89,2.11-6.11,5-6.11s4.94,2.22,4.94,6.11-2.11,6.11-4.94,6.11S11.43,26.91,11.43,23Zm8.16,0c0-3.06-1.32-4.59-3.2-4.59S13.16,20,13.16,23s1.32,4.59,3.22,4.59S19.59,26.07,19.59,23Z" />
+    </g>
+  </g>
+</svg>
