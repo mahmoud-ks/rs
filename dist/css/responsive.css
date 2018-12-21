@@ -1,7 +1,7 @@
 @media (min-width: 992px) {
     .container-md-none{
         padding-left: 0;
-        padding-right: 0; 
+        padding-right: 0;
     }
     .fix-navbar {
         margin-right: -6.75rem !important;
@@ -56,6 +56,16 @@
     .about-content{
         max-width: 100%;
     }
+    .move-up {
+    animation-name: moveupdiv;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+    /* Standard syntax */
+    @keyframes moveupdiv {
+        0%   { top:80px;}
+        100%  { top:-10px;}
+      }
 }
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
 

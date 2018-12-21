@@ -327,3 +327,9 @@ hr.under-title {
     text-align: left;
     padding: 20px;
 }
+.cart-label {
+    width: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
