@@ -67,6 +67,31 @@
         100%  { top:-10px;}
       }
 }
+
+@media (max-width: 767.8px ) {
+    .owl-stage {
+        background-color: #fff;
+    }
+    .complete-the-look a, .iprice {
+        font-size: 8px !important;
+        margin-bottom: 3px;
+    }
+    .btn-rs {
+        color: #083250 !important;
+        background-color: #fac9b8;
+        border-color: #fac9b8;
+        font-weight: bold;
+        padding: 0.25rem 1.75rem;
+    }
+    .app-m-p-0 {
+        margin: 0 !important;
+        padding: 0;
+    }.p-l-r-35 {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
 
 }
