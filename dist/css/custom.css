@@ -34,7 +34,7 @@ header {
 }
 input[type=radio] {
     visibility: hidden;
-    display: none;
+    display: none; 
 }
 input[type=radio] + label {
     color: #888;
@@ -276,7 +276,7 @@ hr.under-title {
 }
 .img-about {
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 70px; 
 }
 .about-content {
     margin-top: 40px;
@@ -350,7 +350,7 @@ hr.under-title {
     transition: opacity 0.5s ease-out;
     opacity: 0;
     position: absolute;
-    bottom: 67px;
+    bottom: 86px;
     color: wheat;
     text-align: center;
     background-color: white;
@@ -400,7 +400,7 @@ hr.under-title {
 .rs-select {
     position: relative;
   }
-
+  
   .rs-select:after {
     content: '';
     right: 25px;
@@ -460,7 +460,7 @@ hr.under-title {
 }
 .app-item-tilte {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 500;   
 }
 .app-item-price {
     font-size: 18px;
@@ -586,7 +586,7 @@ li.breadcrumb-item.active a::after {
 }
 
 
-
+  
 
 
 @media (max-width: 767.8px ) {
@@ -620,3 +620,4 @@ li.breadcrumb-item.active a::after {
     color: #606975;
     top: 50%;
 }
+
