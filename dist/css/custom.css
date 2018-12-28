@@ -565,7 +565,7 @@ li.breadcrumb-item.active a::after {
     position: relative;
      text-decoration: none;
 }
-.underline li.link a:before {
+.underline li.link a:before, .underline-link:before {
     content: "";
     position: absolute;
      width: 100%;
@@ -579,8 +579,7 @@ li.breadcrumb-item.active a::after {
     -webkit-transition: all 0.3s ease-in-out 0s;
      transition: all 0.3s ease-in-out 0s;
 }
-
-.underline li.link a:hover:before {
+.underline li.link a:hover:before, .underline-link:hover:before {
     visibility: visible;
      -webkit-transform: scaleX(1);
      transform: scaleX(1);
