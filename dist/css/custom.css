@@ -34,7 +34,7 @@ header {
 }
 input[type=radio] {
     visibility: hidden;
-    display: none;
+    display: none; 
 }
 input[type=radio] + label {
     color: #888;
@@ -276,7 +276,7 @@ hr.under-title {
 }
 .img-about {
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 70px; 
 }
 .about-content {
     margin-top: 40px;
@@ -400,7 +400,7 @@ hr.under-title {
 .rs-select {
     position: relative;
   }
-
+  
   .rs-select:after {
     content: '';
     right: 25px;
@@ -460,7 +460,7 @@ hr.under-title {
 }
 .app-item-tilte {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 500;   
 }
 .app-item-price {
     font-size: 18px;
@@ -558,10 +558,35 @@ li.breadcrumb-item.active a::after {
     background-color: #083250;
     text-align: center;
 }
+.no-products-found{
+    margin: 180px auto;
+}
+.underline li a {
+    position: relative;
+     text-decoration: none;
+}
+.underline li.link a:before {
+    content: "";
+    position: absolute;
+     width: 100%;
+     height: 1px;
+     bottom: 0;
+     left: 0;
+    background-color: #222;
+    visibility: hidden;
+     -webkit-transform: scaleX(0);
+     transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+     transition: all 0.3s ease-in-out 0s;
+}
+.usderline li a:hover:before {
+    visibility: visible;
+     -webkit-transform: scaleX(1);
+     transform: scaleX(1);
+}
 
 
-
-
+  
 
 
 @media (max-width: 767.8px ) {
@@ -595,3 +620,4 @@ li.breadcrumb-item.active a::after {
     color: #606975;
     top: 50%;
 }
+
