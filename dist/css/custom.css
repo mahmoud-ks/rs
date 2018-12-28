@@ -332,9 +332,9 @@ hr.under-title {
     padding-bottom: 5px;
     color: rgba(0, 0, 0, 1);
 }
-.categories-horizontal a:hover {
+/* .categories-horizontal a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 1);
-}
+} */
 .categories-horizontal .active a {
     border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
@@ -561,7 +561,7 @@ li.breadcrumb-item.active a::after {
 .no-products-found{
     margin: 180px auto;
 }
-.underline li a {
+.underline li a, .uderline-link {
     position: relative;
      text-decoration: none;
 }
