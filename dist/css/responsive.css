@@ -102,3 +102,9 @@
         left: 685px;
     }
 }
+/** see all btn in home page **/
+@media (min-width: 768px ){
+    .gutters-3 {
+        margin-top: 120px;
+    }
+}
