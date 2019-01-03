@@ -90,6 +90,9 @@
         padding-left: 35px;
         padding-right: 35px;
     }
+    .mb-xs-0{
+        margin-bottom: 3px;
+    }
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
