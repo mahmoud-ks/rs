@@ -19,13 +19,6 @@
         transform: translate(-50%, -50%);
         position: absolute;
     }
-    .mobile-menu-icon {
-        position: absolute;
-        top: -2px;
-        left: 15px;
-        margin: 0;
-        padding: 0;
-    }
     .home-content{
         margin-top: 0px;
         padding: 0;
