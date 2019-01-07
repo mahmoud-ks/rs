@@ -20,14 +20,14 @@
         position: absolute;
     }
     .home-content{
-        margin-top: 0px;
-        padding: 0;
+        margin-top: 40px;
+        padding: 8px;
     }
     .about-content {
         margin-left: 0;
         margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 8px;
+        padding-right: 8px;
     }
     .copyright{
         border: 0;
