@@ -52,10 +52,6 @@
     .about-content{
         max-width: 100%;
     }
-    .container {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
     .move-up {
     animation-name: moveupdiv;
     animation-duration: 1s;
@@ -92,6 +88,10 @@
     }
     .mb-xs-0{
         margin-bottom: 3px;
+    }
+    .p-lr-8 {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 
