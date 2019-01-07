@@ -13,8 +13,10 @@
         height: 50px;
     }
     .nav-logo {
-        width: 60%;
+        width: 220px;
         text-align: center;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
     }
     .mobile-menu-icon {
         position: absolute;
