@@ -52,6 +52,10 @@
     .about-content{
         max-width: 100%;
     }
+    .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
     .move-up {
     animation-name: moveupdiv;
     animation-duration: 1s;
