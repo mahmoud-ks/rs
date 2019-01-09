@@ -130,7 +130,7 @@ $(function () {
         fixedCls = 'fixed-top',
         lastScroll = $(window).scrollTop()
     $(window).scroll(function () {
-      var headerHeight = header.outerHeight() + 100,
+      var headerHeight = header.outerHeight() + 50,
           scrollTop = $(this).scrollTop()
       if (scrollTop < lastScroll) {
         if (scrollTop <= ost) {
