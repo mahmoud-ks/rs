@@ -180,7 +180,7 @@ $(document).ready(function () {
         $('.quickview-modal .viewbutton').attr('href', data.url);
 
         /*$('.quickview-modal .mainimage').attr('src', data.image.replace('50x50x2', '250x250x1'));*/
-        console.log('data2: ')
+        console.log('datab: ')
         console.log('data')
 
         // Does the product even have an image?
@@ -263,7 +263,7 @@ $(document).ready(function () {
             $('.quickview-modal .description').html('<p class="message-blue">' + tNoInformationFound + '</p>');
         }
 
-        console.log('VARIANTS: ');
+        console.log('variants: ');
         console.log(data.variants);
 
         if (Object.keys(data.variants).length > 0) {
@@ -449,8 +449,8 @@ $(document).ready(function () {
             else {
                 var custom = false;
             }
-
-            console.log(custom)
+            console.log('custom: ');
+            console.log(custom);
 
             drawQuickView(data[0], custom, errors)
         })
