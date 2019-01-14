@@ -107,7 +107,6 @@ function deparam(query) {
 
 function checkProductsOnStock(available, stocktrack, qty, stocklevel, allowoutofstocksale, onstock) {
     if (String(allowoutofstocksale) == "true") {
-        console.log('true: ' + allowoutofstocksale);
         return true;
     }
 
@@ -181,7 +180,7 @@ $(document).ready(function () {
         $('.quickview-modal .viewbutton').attr('href', data.url);
 
         /*$('.quickview-modal .mainimage').attr('src', data.image.replace('50x50x2', '250x250x1'));*/
-
+        console.log('data2: ')
         console.log('data')
 
         // Does the product even have an image?
@@ -264,11 +263,10 @@ $(document).ready(function () {
             $('.quickview-modal .description').html('<p class="message-blue">' + tNoInformationFound + '</p>');
         }
 
-        console.log('VARIANTS:');
+        console.log('VARIANTS: ');
         console.log(data.variants);
 
         if (Object.keys(data.variants).length > 0) {
-            console.log('pass iff');
             $('#formfields').append('<div class="variants"><select class="quickview-variants" name="variant" id="product_configure_variants"></select></div>');
 
             $.each(data.variants, function (index, variant) {
@@ -351,7 +349,6 @@ $(document).ready(function () {
         // add2cart button in quickveiw
         //--------------------------------
         $('.quickview-addtocart').off().on('click', function (e) {
-            console.log('.quickview-addtocart clicked');
             e.preventDefault();
 
             var variantQty = $('.quickview-modal .quantity').val();
@@ -375,12 +372,6 @@ $(document).ready(function () {
                 var variantMinimumQty = data.stock.minimum;
                 var variantOnStock = data.stock.on_stock;
             }
-
-            console.log('variant available: ' + variantAvailable);
-            console.log('variant stocktrack: ' + variantStocktrack);
-            console.log('variant qty add2cart: ' + variantQty);
-            console.log('variant available: ' + variantStocklevel);
-            console.log('variant minimum qty add2cart: ' + variantMinimumQty);
 
             if (checkProductsOnStock(variantAvailable, variantStocktrack, variantQty, variantStocklevel, variantAllowOutofstockSale, variantOnStock) == false) {
                 //$('.quickview-modal .errors').html('<ul><li>'+tRequestedAmountNotAvailable+'</li></ul>');
@@ -417,17 +408,13 @@ $(document).ready(function () {
                 }
 
                 if ($('.quickview-modal #product_configure_variants').length > 0) {
-                    console.log('product in quickview has multiple variants');
                     //var vid = $('.quickview-modal #product_configure_variants option:selected').val();
                     var vid = $('.quickview-variants option:selected').val();
                 }
                 else {
-                    console.log('product in quickview has only default variants');
                     var vid = data.vid;
                 }
 
-                console.log('Trigger quickInCart with fields: ' + fields)
-                console.log('and variant: ' + vid)
                 quickInCart(vid, data.fulltitle, data.image, data.url, fields);
             }
         })
@@ -451,7 +438,8 @@ $(document).ready(function () {
         //stupid ls ecom, images are in .ajax, custom options in ?format=json
         //So lets just get the html from the productpage and insert
         $.when($.getJSON(url.replace('html', 'ajax')), $.get(url)).then(function (data, data2) {
-            //console.log(data2);
+            console.log(data);
+            console.log(data2);
 
             var $custom = $(data2[0]).find('.product-configure-custom');
 
@@ -462,7 +450,7 @@ $(document).ready(function () {
                 var custom = false;
             }
 
-            //console.log(custom)
+            console.log(custom)
 
             drawQuickView(data[0], custom, errors)
         })
@@ -521,15 +509,6 @@ $(document).ready(function () {
 
     /* Ajax product in cart */
     function quickInCart(vid, title, img, producturl, fields) {
-        //fields = '';
-        console.log('start quick in cart');
-        console.log(' - vid: ' + vid)
-        console.log(' - title: ' + title)
-        console.log(' - img: ' + img)
-        console.log(' - prod url: ' + producturl)
-        console.log(' - ' + fields)
-        console.log('end first logs');
-
         //Show loading splash
         $('.loading').fadeIn(100);
 
@@ -539,20 +518,11 @@ $(document).ready(function () {
         $.getJSON(producturl.replace('html', 'ajax'), function (data) {
 
         }).done(function (data) {
-            console.log('product ajax data:');
-            console.log(data);
 
-            console.log(fieldsObject);
-            console.log(fieldsObject.variant)
-            console.log('nr of variants: ' + Object.keys(data.variants).length)
-
-            console.log('bundle_id:');
-            console.log(fieldsObject.bundle_id)
 
             if (Object.keys(data.variants).length > 1 && typeof fieldsObject.variant == 'undefined' && typeof fieldsObject.bundle_id == 'undefined') {
                 $('.quickcart-modal').fadeOut(200);
 
-                console.log('Hmm, multiple variants, so show quickview');
                 quickView(producturl);
             }
             else {
@@ -563,8 +533,6 @@ $(document).ready(function () {
 
                 //Check if there is a variants object, else check the data.stock
                 if (Object.keys(data.variants).length > 1) {
-                    console.log(data.variants);
-                    console.log(vid);
                     if (data.variants[vid].stock.available == false) {
                         productAvailable = false;
                     }
@@ -573,10 +541,6 @@ $(document).ready(function () {
                     // Only for gridstyle=always with a qty field
                     // Update: variants[vid].stock changed to data.stock, this var is not available in vid
                     stockAlert = checkProductsOnStock(data.variants[vid].stock.available, data.variants[vid].stock.track, fieldsObject.quantity, data.variants[vid].stock.level, data.stock.allow_outofstock_sale, data.variants[vid].stock.on_stock);
-
-                    console.log('stockAlert1: ' + stockAlert);
-                    console.log('data variant vid: ');
-                    console.log(data.variants[vid]);
 
                     variantStockLevel = data.variants[vid].stock.level;
                     minimumQty = data.variants[vid].stock.minimum;
@@ -605,12 +569,10 @@ $(document).ready(function () {
                     document.location = mainUrl + 'cart/add/' + vid;
                 }
                 else {
-                    console.log('start post add to cart');
 
                     $.post(mainUrl + 'cart/add/' + vid + '/', fields, function (result) {
 
                     }).done(function (result) {
-                        console.log('done post add to cart');
 
                         //check if error div is present in result, if so then redirect to /add/cart/vid which redirects it to product and show error again
                         //else just proceed with other handler stuff
@@ -618,7 +580,6 @@ $(document).ready(function () {
 
                         var cartContentData = $data.find('.cart-content-holder').html();
 
-                        //console.log($data.find('ul.error').parent().html())
 
                         if ($data.find('ul.error').length) {
                             //Show modal or something with error
@@ -632,14 +593,10 @@ $(document).ready(function () {
                             else {
                                 $('.quickcart-modal').fadeOut(200);
 
-                                console.log('error, theres a mandatory field, load quickview now');
-                                //return;
-                                console.log('*************');
                                 quickView(producturl, $data.find('ul.error').parent().html());
                             }
                         }
                         else {
-                            console.log('ok product added');
 
                             var qty = parseInt(fieldsObject.quantity);
 
@@ -648,7 +605,6 @@ $(document).ready(function () {
                                 qty = variantStockLevel;
                             }
 
-                            console.log('qty added to cart: ' + qty)
 
                             $('.cart-content-holder').html(cartContentData);
 
@@ -675,7 +631,6 @@ $(document).ready(function () {
 
     /* Product page place in cart */
     $('.place-in-cart').on('click', function (e) {
-        console.log('pressed .place-in-cart');
 
         // Only on larger screens
         if ($(window).width() < 950) {
@@ -687,21 +642,8 @@ $(document).ready(function () {
 
         var fields = $('#product_configure_form').serialize();
 
-        console.log('Start function quickInCart with fields: ' + fields);
-
         var fieldsObject = deparam(fields);
-        console.log(fieldsObject);
 
-        /*var variantAvailable = $(this).attr('data-available');
-        var variantStocktrack = $(this).attr('data-stocktrack');
-        var variantStocklevel = $(this).attr('data-stocklevel');
-        var variantAllowOutofstockSale = $(this).attr('data-allowoutofstocksale');
-
-        console.log(variantAvailable)
-        console.log(variantStocktrack)
-        console.log(variantStocklevel)
-        console.log(variantAllowOutofstockSale)
-        console.log(fieldsObject.quantity)*/
 
         if (checkProductsOnStock($(this).attr('data-available'), $(this).attr('data-stocktrack'), fieldsObject.quantity, $(this).attr('data-stocklevel'), $(this).attr('data-allowoutofstocksale'), $(this).attr('data-onstock')) == false) {
             if ($('.productpage-right .stockalert').length < 1) {
@@ -739,7 +681,6 @@ $(document).ready(function () {
 
     /* Collection place in cart */
     $('.quickcart').on('click', function () {
-        console.log('pressed .quickcart');
 
         // Only on larger screens
         if ($(window).width() < 991) {
@@ -760,18 +701,10 @@ $(document).ready(function () {
 
         //if( checkProductsOnStock($(this).attr('data-available'), $(this).attr('data-stocktrack'), qty, $(this).attr('data-stocklevel'), $(this).attr('data-allowoutofstocksale')) == false )
         if (false) {
-            /*if( $('.stockalert').length < 1 )
-            {
-              $('<div class="row rowmargin"><div class="col-md-12"><div class="stockalert"></div></div></div>').insertAfter('.addtocart-row');
-              $('.stockalert').append('<div class="alert-title">'+tRequestedAmountNotAvailable.replace('XXX', $(this).attr('data-title'))+'</div>');
-              $('.stockalert').append('<div class="alert-stock">'+tInStock+': '+$(this).attr('data-stocklevel')+'</div>');
 
-              $('.addtocart-row').scrollView(120);
-            }*/
             alert(tRequestedAmountNotAvailable.replace('XXX', $(this).attr('data-title')) + "\n" + tInStock + ': ' + $(this).attr('data-stocklevel'))
         }
         else {
-            console.log('Start function quickInCart with fields: ' + fields);
             quickInCart($(this).attr('data-vid'), $(this).attr('data-title'), $(this).attr('data-img'), $(this).attr('data-url'), fields);
         }
     });
