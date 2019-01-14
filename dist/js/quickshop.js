@@ -260,7 +260,6 @@ $(document).ready(function () {
             $('.quickview-modal .description').html(data.content.substr(0, 250) + '..');
         }
         else {
-            $('.quickview-modal .description').html('<p class="message-blue">' + tNoInformationFound + '</p>');
         }
 
         console.log('variants: ');
@@ -297,10 +296,7 @@ $(document).ready(function () {
             $('.variant-available').html('<span class="out-of-stock"><i class="fa fa-times"></i> ' + tOutOfStock + '</span>');
         }
 
-        //---------------------------------------------------
-        // Set the default variant price
-        //---------------------------------------------------
-        $('.quickview-modal .variant-price .price').html(data.price.price_money);
+
 
         //---------------------------------------------------
         // Are there custom options? Place the full html
