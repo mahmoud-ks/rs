@@ -276,7 +276,7 @@ $(document).ready(function () {
                     setSelected = ' selected'
                 }
 
-                $('.quickview-variants').append('<option value="' + variant.id + '" data-stocklevel="' + variant.stock.level + '" data-stocktrack="' + variant.stock.track + '" data-available="' + variant.stock.available + '" data-allowoutofstocksale="' + data.stock.allow_outofstock_sale + '" data-onstock="' + variant.stock.on_stock + '" data-minimumqty="' + variant.stock.minimum + '" data-price="' + variant.price.price_incl_money + '"' + setSelected + '>' + variant.title + ' - ' + variant.price.price_incl_money + '</option>');
+                $('.quickview-variants').append('<option value="' + variant.id + '" data-stocklevel="' + variant.stock.level + '" data-stocktrack="' + variant.stock.track + '" data-available="' + variant.stock.available + '" data-allowoutofstocksale="' + data.stock.allow_outofstock_sale + '" data-onstock="' + variant.stock.on_stock + '" data-minimumqty="' + variant.stock.minimum + '" data-price="' + variant.price.price_incl_money + '"' + setSelected + '>' + variant.title + ' - ' + '</option>');
             });
         }
 
