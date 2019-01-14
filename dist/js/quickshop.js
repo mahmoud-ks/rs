@@ -472,7 +472,7 @@ $(document).ready(function () {
             document.location = mainUrl + $(this).attr('data-url');
             return;
         }
-
+        console.log('mahmoud');
         quickView(mainUrl + $(this).attr('data-url'));
     });
 
