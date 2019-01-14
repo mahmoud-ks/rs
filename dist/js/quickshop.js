@@ -168,7 +168,8 @@ $(document).ready(function () {
     }
 
     function drawQuickView(data, customoptions, errors) {
-        //console.log(data)
+        console.log('data: ')
+        console.log(data)
         //return;
         if (typeof errors == 'undefined') {
             var errors = false;
@@ -180,7 +181,8 @@ $(document).ready(function () {
         $('.quickview-modal .viewbutton').attr('href', data.url);
 
         /*$('.quickview-modal .mainimage').attr('src', data.image.replace('50x50x2', '250x250x1'));*/
-        console.log('183: ' + data)
+
+        console.log('data')
 
         // Does the product even have an image?
         // Else we can't loop through images
@@ -472,7 +474,6 @@ $(document).ready(function () {
             document.location = mainUrl + $(this).attr('data-url');
             return;
         }
-        console.log('mahmoud');
         quickView(mainUrl + $(this).attr('data-url'));
     });
 
