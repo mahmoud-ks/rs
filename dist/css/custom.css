@@ -7,8 +7,7 @@
 }
 @font-face {
     font-family: 'Hurme';
-    src: url('HurmeGeometricSans1.woff2') format('woff2'),
-        url('HurmeGeometricSans1.otf') format('woff');
+    src: url('HurmeGeometricSans1.otf') format('woff');
     font-weight: 500;
     font-style: normal;
 }
